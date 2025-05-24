@@ -1,0 +1,10 @@
+torch>=2.1.0
+transformers>=4.37.0
+sentence-transformers>=2.4.0
+numpy<2
+pyserini==0.20.0
+faiss-gpu
+tqdm
+pandas
+click
+ir_datasets_longeval
