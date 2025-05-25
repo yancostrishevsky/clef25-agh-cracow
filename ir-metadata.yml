@@ -1,0 +1,41 @@
+# We use the ir-metadata standard to describe and process runs.
+# The fields below are mandatory, you can add additional metadata if you like.
+
+tag: gromdzio
+
+actor:
+  team: clef25-agh-cracow
+
+research goal:
+  description: |
+    none
+
+platform:
+  software:
+    libraries:
+      - PyTerrier 0.10.0
+
+implementation:
+  source:
+    repository: https://github.com/yancostrishevsky/clef25-agh-cracow
+
+data:
+  training data:
+    - name: Nothing
+
+method:
+  automatic: true
+
+  indexing:
+    tokenizer: Default from PyTerrier
+    stemmer: Default from PyTerrier
+    stopwords: Default from PyTerrier
+
+  retrieval:
+    - name: DenseCosineRetrievalWithReranker
+
+      lexical: no
+      deep_neural_model: yes
+      sparse_neural_model: no
+      dense_neural_model: yes
+      single_stage_retrieval: no
