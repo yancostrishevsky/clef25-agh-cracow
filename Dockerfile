@@ -19,8 +19,12 @@ RUN pip install --upgrade torch
 
 RUN pip install pyserini==0.20.0
 
+# -- TU DODAJ TO -- #
+RUN python -c "from sentence_transformers import SentenceTransformer; SentenceTransformer('intfloat/e5-base-v2')" && \
+    python -c "from sentence_transformers import CrossEncoder; CrossEncoder('cross-encoder/ms-marco-MiniLM-L-12-v2')"
+# ----------------- #
+
 COPY . /app
 WORKDIR /app
 
 ENTRYPOINT ["/bin/bash", "run_pipeline.sh"]
-
