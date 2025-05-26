@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-DATASET=longeval-sci/2024-11
+DATASET=longeval-sci/2025-01
 OUTPUT=output
 INDEX=indexes
 
